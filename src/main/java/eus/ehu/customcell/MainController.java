@@ -1,6 +1,6 @@
 package eus.ehu.customcell;
 
-import eus.ehu.customcell.domain.Teacher;
+import eus.ehu.customcell.domain.Pokemon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import java.util.List;
 public class MainController {
 
     @FXML
-    private ListView<Teacher> teachersView;
+    private ListView<Pokemon> teachersView;
 
 
     @FXML
@@ -20,16 +20,16 @@ public class MainController {
     }
 
     public void showList() {
-        List<Teacher> itemList = getTeachers();
+        List<Pokemon> itemList = getTeachers();
 
-        ObservableList<Teacher> items = FXCollections.observableList(itemList);
+        ObservableList<Pokemon> items = FXCollections.observableList(itemList);
 
         if (teachersView != null) {
             teachersView.setItems(items);
             teachersView.setCellFactory(param -> {
-                var cell =  new TeacherItemCell();
+                var cell =  new PokemonItemCell();
                 cell.setOnMouseClicked((evt) -> {
-                    Teacher item = cell.getItem();
+                    Pokemon item = cell.getItem();
                     if (item != null) System.out.println("Show teacher's data " + item.toString());
 
                 });
@@ -41,11 +41,11 @@ public class MainController {
 
     }
 
-    private List<Teacher> getTeachers() {
-        Teacher juanan = new Teacher("Juanan Pereira", "juanan.pereira@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/273496_20230307155712884.jpg");
-        Teacher usue = new Teacher("Usue Mori", "usue.mori@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/314714_20230307155956841.jpg");
-        Teacher javierdolado = new Teacher("Javier Dolado", "javier.dolado@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/3647_20230307160023681.jpg");
-        return List.of(juanan, usue, javierdolado);
+    private List<Pokemon> getTeachers() {
+        Pokemon ditto = new Pokemon("Ditto", "Limber", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/132.png");
+        Pokemon bulbasaur = new Pokemon("Bulbasaur", "Chlorophyll", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1.png");
+        Pokemon charmander = new Pokemon("Charmander", "Solar-Power", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/4.png");
+        return List.of(ditto, bulbasaur, charmander);
     }
 
 }

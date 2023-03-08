@@ -1,6 +1,6 @@
 package eus.ehu.customcell;
 
-import eus.ehu.customcell.domain.Teacher;
+import eus.ehu.customcell.domain.Pokemon;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 
@@ -10,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-public class TeacherItemCell extends ListCell<Teacher> {
+public class PokemonItemCell extends ListCell<Pokemon> {
 
     private FXMLLoader mLLoader;
 
@@ -18,7 +18,7 @@ public class TeacherItemCell extends ListCell<Teacher> {
     private AnchorPane listItem;
 
     @FXML
-    private Label email;
+    private Label ability;
 
     @FXML
     private Label name;
@@ -27,7 +27,7 @@ public class TeacherItemCell extends ListCell<Teacher> {
     private ImageView picture;
 
     @Override
-    protected void updateItem(Teacher item, boolean empty) {
+    protected void updateItem(Pokemon item, boolean empty) {
         super.updateItem(item, empty);
         if (empty || item == null) {
             setGraphic(null);
@@ -37,7 +37,7 @@ public class TeacherItemCell extends ListCell<Teacher> {
         }
 
         if (mLLoader == null) {
-            mLLoader = new FXMLLoader(getClass().getResource("teacher.fxml"));
+            mLLoader = new FXMLLoader(getClass().getResource("pokemon.fxml"));
             mLLoader.setController(this);
             try {
                 mLLoader.load();
@@ -48,7 +48,7 @@ public class TeacherItemCell extends ListCell<Teacher> {
 
 
         name.setText(item.getName());
-        email.setText(item.getEmail());
+        ability.setText(item.getAbility());
         picture.setImage(new Image(item.getPicture()));
 
         setText(null);

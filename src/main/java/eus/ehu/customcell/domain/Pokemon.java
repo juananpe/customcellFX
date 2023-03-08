@@ -1,13 +1,13 @@
 package eus.ehu.customcell.domain;
 
-public class Teacher {
+public class Pokemon {
     String name;
-    String email;
+    String ability;
     String picture;
 
-    public Teacher(String name, String email, String picture) {
+    public Pokemon(String name, String ability, String picture) {
         this.name = name;
-        this.email = email;
+        this.ability = ability;
         this.picture = picture;
     }
 
@@ -15,8 +15,8 @@ public class Teacher {
         return name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAbility() {
+        return ability;
     }
 
     public String getPicture() {
@@ -27,7 +27,7 @@ public class Teacher {
     public String toString() {
         return "Teacher{" +
                 "name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", ability='" + ability + '\'' +
                 ", picture='" + picture + '\'' +
                 '}';
     }

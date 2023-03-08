@@ -7,9 +7,9 @@
 <AnchorPane fx:id="listItem" prefHeight="231.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="123.0" layoutY="90.0" text="Name:" />
-      <Label layoutX="123.0" layoutY="126.0" text="Email" />
+      <Label layoutX="123.0" layoutY="126.0" text="Ability:" />
       <Label fx:id="name" layoutX="173.0" layoutY="90.0" text=" " />
-      <Label fx:id="email" layoutX="173.0" layoutY="126.0" text=" " />
+      <Label fx:id="ability" layoutX="173.0" layoutY="126.0" text=" " />
       <ImageView fx:id="picture" fitHeight="150.0" fitWidth="200.0" layoutX="353.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
