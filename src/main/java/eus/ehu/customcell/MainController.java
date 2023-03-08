@@ -3,24 +3,20 @@ package eus.ehu.customcell;
 import eus.ehu.customcell.domain.Teacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 import java.util.List;
 
-public class HelloController {
+public class MainController {
 
     @FXML
     private ListView<Teacher> teachersView;
 
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    void onHelloButtonClick(ActionEvent event) {
-
+    public void initialize() {
+        showList();
     }
 
     public void showList() {
@@ -46,7 +42,10 @@ public class HelloController {
     }
 
     private List<Teacher> getTeachers() {
-        return null;
+        Teacher juanan = new Teacher("Juanan Pereira", "juanan.pereira@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/273496_20230307155712884.jpg");
+        Teacher usue = new Teacher("Usue Mori", "usue.mori@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/314714_20230307155956841.jpg");
+        Teacher javierdolado = new Teacher("Javier Dolado", "javier.dolado@ehu.eus", "https://gestion-alumnos.ehu.es/tmp/3647_20230307160023681.jpg");
+        return List.of(juanan, usue, javierdolado);
     }
 
 }

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="eus.ehu.customcell.Teachers"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="listItem" prefHeight="231.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="123.0" layoutY="90.0" text="Name:" />
+      <Label layoutX="123.0" layoutY="126.0" text="Email" />
+      <Label fx:id="name" layoutX="173.0" layoutY="90.0" text=" " />
+      <Label fx:id="email" layoutX="173.0" layoutY="126.0" text=" " />
+      <ImageView fx:id="picture" fitHeight="150.0" fitWidth="200.0" layoutX="353.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
 </AnchorPane>
