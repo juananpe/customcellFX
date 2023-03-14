@@ -30,7 +30,7 @@ public class MainController {
                 var cell =  new PokemonItemCell();
                 cell.setOnMouseClicked((evt) -> {
                     Pokemon item = cell.getItem();
-                    if (item != null) System.out.println("Pokémon's data: " + item.toString());
+                    if (item != null) System.out.println("Pokémon's data: " + item);
 
                 });
 
