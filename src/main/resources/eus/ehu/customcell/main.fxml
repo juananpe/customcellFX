@@ -8,5 +8,5 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <ListView fx:id="teachersView" layoutX="42.0" layoutY="58.0" prefHeight="383.0" prefWidth="699.0" />
+   <ListView fx:id="pokemonView" layoutX="42.0" layoutY="58.0" prefHeight="383.0" prefWidth="699.0" />
 </AnchorPane>

@@ -25,7 +25,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "Pokemon{" +
                 "name='" + name + '\'' +
                 ", ability='" + ability + '\'' +
                 ", picture='" + picture + '\'' +
