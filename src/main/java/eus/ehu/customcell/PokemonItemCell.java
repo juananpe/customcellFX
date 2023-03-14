@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class PokemonItemCell extends ListCell<Pokemon> {
 
-    private FXMLLoader mLLoader;
+    private FXMLLoader loader;
 
     @FXML
     private AnchorPane listItem;
@@ -36,11 +36,11 @@ public class PokemonItemCell extends ListCell<Pokemon> {
             return;
         }
 
-        if (mLLoader == null) {
-            mLLoader = new FXMLLoader(getClass().getResource("pokemon.fxml"));
-            mLLoader.setController(this);
+        if (loader == null) {
+            loader = new FXMLLoader(getClass().getResource("pokemon.fxml"));
+            loader.setController(this);
             try {
-                mLLoader.load();
+                loader.load();
             } catch (Exception e) {
                 e.printStackTrace();
             }
